@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import { ArrowUpRight, ChevronRight, Mail, MapPin, ShieldCheck } from 'lucide-react'
 import { CONTACT } from './config'
@@ -7,6 +8,26 @@ const legalNav = [['KAR Privacy', '/privacy/kar'], ['KAR Terms', '/terms/kar'], 
 
 function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
+  useEffect(() => {
+    const metadata: Record<string, [string, string]> = {
+      '/': ['Reckley Ventures, LLC — Building what lasts.', 'Reckley Ventures builds and grows practical businesses, technology platforms, and brands.'],
+      '/about': ['About — Reckley Ventures, LLC', 'Learn about Reckley Ventures, LLC, a Maryland holding company for durable businesses, brands, and technology ventures.'],
+      '/companies': ['Companies — Reckley Ventures, LLC', 'Explore the Reckley Ventures portfolio, beginning with KAR, a driver-first transportation marketplace.'],
+      '/contact': ['Contact — Reckley Ventures, LLC', 'Contact Reckley Ventures, LLC for business, legal, privacy, compliance, and partnership inquiries.'],
+      '/privacy/kar': ['KAR Privacy Policy — Draft for Review', 'Draft KAR privacy policy covering marketplace data, location, payments, safety, rights, and account deletion.'],
+      '/terms/kar': ['KAR Terms — Draft for Review', 'Draft KAR terms covering the technology marketplace, independent providers, rider choice, safety, and legal terms.'],
+      '/account-deletion/kar': ['KAR Account Deletion', 'Learn how to request deletion of a KAR account and what records may need to be retained.'],
+      '/support/kar': ['KAR Support', 'Find support resources for KAR riders, drivers, safety issues, accounts, privacy, and deletion requests.'],
+    }
+    const [title, description] = metadata[location.pathname] ?? metadata['/']
+    document.title = title
+    const setMeta = (selector: string, content: string) => { const el = document.querySelector(selector); if (el) el.setAttribute('content', content) }
+    setMeta('meta[name="description"]', description)
+    setMeta('meta[property="og:title"]', title)
+    setMeta('meta[property="og:description"]', description)
+    const canonical = document.querySelector('link[rel="canonical"]')
+    if (canonical) canonical.setAttribute('href', `https://reckleyventures.us${location.pathname}`)
+  }, [location.pathname])
   return <div className="site-shell"><header className="header"><Link className="wordmark" to="/"><span className="mark">R</span><span>RECKLEY<br/><em>VENTURES</em></span></Link><nav aria-label="Main navigation">{nav.map(([label, path]) => <Link className={location.pathname === path ? 'active' : ''} to={path} key={path}>{label}</Link>)}</nav><Link className="header-cta" to="/contact">Get in touch <ArrowUpRight size={16}/></Link></header><main>{children}</main><footer className="footer"><div><Link className="wordmark" to="/"><span className="mark">R</span><span>RECKLEY<br/><em>VENTURES</em></span></Link><p>Building what lasts.</p></div><div className="footer-links"><div><small>Company</small>{nav.map(([label,path]) => <Link to={path} key={path}>{label}</Link>)}</div><div><small>KAR resources</small>{legalNav.map(([label,path]) => <Link to={path} key={path}>{label}</Link>)}</div></div><div className="footer-bottom"><span>© 2025 Reckley Ventures, LLC</span><span>Maryland, USA</span></div></footer></div>
 }
 
