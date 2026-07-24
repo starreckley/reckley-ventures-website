@@ -1,6 +1,6 @@
 # Reckley Ventures, LLC — Official Website
 
-Corporate website and KAR legal/compliance center for Reckley Ventures, LLC.
+Premium corporate website and KAR legal/compliance center for Reckley Ventures, LLC.
 
 ## Local development
 
@@ -28,6 +28,6 @@ The generated static site is written to `dist`.
 
 ## Configuration
 
-Public contact mailboxes are centralized in `src/config.ts` so they can be changed in one place if addresses are updated.
+Public contact mailboxes, company facts, portfolio data, and document content are centralized in `src/content.ts`.
 
-The KAR privacy policy and terms are drafts and must receive final legal/business review before commercial launch.
+The KAR privacy policy and terms are drafts and must receive final legal/business review before commercial launch. The source audit is internal-only in `AUDIT-KAR-LEGAL.md` and is not linked from the public site.
