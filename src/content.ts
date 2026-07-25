@@ -32,11 +32,27 @@ export const KAR = {
   detail: 'KAR is designed to give independent transportation providers greater control over rates, availability, service areas, and customer relationships—while giving riders clearer choices.',
 }
 
+export const DUUST = {
+  name: 'Duust',
+  legalOperator: 'Reckley Ventures, LLC',
+  url: 'https://duust.us',
+  supportEmail: 'support@duust.us',
+  supportEmailHref: 'mailto:support@duust.us',
+  phone: CONTACT.phone,
+  phoneHref: CONTACT.phoneHref,
+  category: 'Cleaning marketplace and business technology',
+  status: 'In development / pre-launch',
+  headline: 'A premium way to find—and run—a cleaning business.',
+  summary: 'Duust connects customers with qualified cleaning professionals while giving cleaning businesses purpose-built tools for quoting, scheduling, invoicing, customer management, and growth.',
+  customerValue: 'Post a cleaning request, compare itemized quotes, communicate with professionals, and choose the right cleaner.',
+  professionalValue: 'Access matching opportunities and manage customers, estimates, schedules, invoices, teams, and recurring services through Duust Business.',
+  product: 'Premium cleaning marketplace and native cleaning-business platform',
+  logoText: 'DUUST',
+}
+
 export const EXIT_STRATEGY = {
   name: 'Exit Strategy Cleaning',
   legalOperator: 'Reckley Ventures, LLC operating Exit Strategy Cleaning',
-  url: 'https://exitstrategycleaning.com',
-  temporaryWebsiteUrl: 'https://exitcleaning-8akvwvwe.manus.space/',
   category: 'Professional Cleaning & Property Services',
   status: 'Operating brand / platform development planned',
   phone: CONTACT.phone,
@@ -53,8 +69,6 @@ export const EXIT_STRATEGY = {
   serviceArea: 'Washington, DC, Maryland, Virginia, West Virginia, and Pennsylvania',
   services: ['Move-out cleaning', 'Move-in cleaning', 'Deep cleaning', 'Recurring residential cleaning', 'Small commercial cleaning'],
   verificationStatus: 'Core service categories and contact details require ongoing owner confirmation; conflicting temporary-site contact claims are not reused.',
-  logo: '/exit-strategy-cleaning-logo.png',
-  headerLogo: '/exit-strategy-cleaning-header.png',
 }
 
 export type LegalSection = { id: string; title: string; body: string[] }
