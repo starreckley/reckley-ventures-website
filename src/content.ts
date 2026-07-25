@@ -30,6 +30,22 @@ export const KAR = {
   detail: 'KAR is designed to give independent transportation providers greater control over rates, availability, service areas, and customer relationships—while giving riders clearer choices.',
 }
 
+export const EXIT_STRATEGY = {
+  name: 'Exit Strategy Cleaning',
+  url: 'https://exitstrategycleaning.com',
+  category: 'Residential and commercial cleaning',
+  status: 'Operating company',
+  phone: '301-453-5477',
+  phoneHref: 'tel:+13014535477',
+  email: 'exitstrategycleaning@myyahoo.com',
+  emailHref: 'mailto:exitstrategycleaning@myyahoo.com',
+  summary: 'Professional move-out, move-in, deep, recurring, and commercial cleaning services.',
+  detail: 'Exit Strategy Cleaning helps homes, property owners, offices, and turnover teams prepare spaces for the next chapter with dependable, detail-focused cleaning services.',
+  serviceArea: 'Washington, DC, Maryland, Virginia, West Virginia, and Pennsylvania',
+  logo: '/exit-strategy-cleaning-logo.png',
+  headerLogo: '/exit-strategy-cleaning-header.png',
+}
+
 export type LegalSection = { id: string; title: string; body: string[] }
 
 export const PRIVACY_SECTIONS: LegalSection[] = [
