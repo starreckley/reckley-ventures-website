@@ -9,6 +9,18 @@
   force = true
 
 [[redirects]]
+  from = "/companies/exit-strategy-cleaning"
+  to = "/companies/duust"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/exit-strategy-cleaning"
+  to = "/companies/duust"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
