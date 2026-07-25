@@ -32,21 +32,59 @@ export const KAR = {
 
 export const EXIT_STRATEGY = {
   name: 'Exit Strategy Cleaning',
+  legalOperator: 'Reckley Ventures, LLC operating Exit Strategy Cleaning',
   url: 'https://exitstrategycleaning.com',
-  category: 'Residential and commercial cleaning',
-  status: 'Operating company',
+  temporaryWebsiteUrl: 'https://exitcleaning-8akvwvwe.manus.space/',
+  category: 'Professional Cleaning & Property Services',
+  status: 'Operating brand / platform development planned',
   phone: '301-453-5477',
   phoneHref: 'tel:+13014535477',
   email: 'exitstrategycleaning@myyahoo.com',
   emailHref: 'mailto:exitstrategycleaning@myyahoo.com',
+  supportEmail: 'exitstrategycleaning@myyahoo.com',
+  mailingAddress: COMPANY.address,
   summary: 'Professional move-out, move-in, deep, recurring, and commercial cleaning services.',
   detail: 'Exit Strategy Cleaning helps homes, property owners, offices, and turnover teams prepare spaces for the next chapter with dependable, detail-focused cleaning services.',
+  serviceAreas: ['Washington, DC', 'Maryland', 'Virginia', 'West Virginia', 'Pennsylvania'],
   serviceArea: 'Washington, DC, Maryland, Virginia, West Virginia, and Pennsylvania',
+  services: ['Move-out cleaning', 'Move-in cleaning', 'Deep cleaning', 'Recurring residential cleaning', 'Small commercial cleaning'],
+  verificationStatus: 'Core service categories and contact details require ongoing owner confirmation; conflicting temporary-site contact claims are not reused.',
   logo: '/exit-strategy-cleaning-logo.png',
   headerLogo: '/exit-strategy-cleaning-header.png',
 }
 
 export type LegalSection = { id: string; title: string; body: string[] }
+
+export const EXIT_PRIVACY_SECTIONS: LegalSection[] = [
+  { id: 'operator', title: 'Operator and scope', body: [`This draft describes how ${EXIT_STRATEGY.legalOperator} may handle information for the current public website, quote requests, cleaning-service communications, and related customer-service interactions. It does not describe a future provider marketplace as active.`] },
+  { id: 'customer-info', title: 'Information customers may provide', body: ['Depending on the request, customers may provide a name, email address, telephone number, service address, billing information, requested service, property details, room or property size, cleaning priorities, requested dates and times, quote photographs, special instructions, access or parking instructions, pet information, alarm or entry instructions, commercial-property information, invoice details, and customer-service communications.'] },
+  { id: 'photos-access', title: 'Property photographs and access information', body: ['Photos may be requested or collected for quoting, service planning, completion records, quality review, condition documentation, or damage disputes if the current workflow supports that use. Photos should not intentionally capture sensitive personal information unnecessarily. Customers should not send door codes, alarm codes, payment-card data, government IDs, or other sensitive security information through an unsecured public request.', 'Where access details are provided, they are used only to coordinate the requested service and should be protected from unnecessary disclosure.'] },
+  { id: 'service-personnel', title: 'Service personnel information', body: ['If current operations involve employees or service providers, Exit Strategy Cleaning may handle basic identity, contact, availability, service-area, job, payment, check-in, service-photo, or quality records as actually required for operations. This draft does not claim that background checks, GPS check-in, insurance verification, or a particular worker classification are currently required.'] },
+  { id: 'payments-sharing', title: 'Payments and sharing', body: ['Payments or invoices may be handled through authorized third-party processors or business systems. Reckley Ventures does not claim to store full payment-card numbers. Information may be shared as needed with assigned service personnel, payment and communication providers, hosting or scheduling systems, professional advisers, insurers where applicable, safety or fraud services, legal authorities, and business-service providers.'] },
+  { id: 'marketing', title: 'Communications and marketing', body: ['Quote, appointment, service, invoice, and support messages are transactional communications. Marketing email or SMS should be used only where enabled and permitted. Where applicable, recipients may opt out of marketing messages while still receiving necessary service communications.'] },
+  { id: 'retention', title: 'Retention and rights', body: ['Records may be retained as needed for customer service, contracts, payment and accounting, tax, insurance, damage disputes, fraud prevention, safety, legal compliance, and ordinary business records. No fixed retention period is promised here. Depending on applicable law, individuals may request access, correction, deletion where applicable, or communication-preference changes.'] },
+  { id: 'children-future', title: 'Adults and future development', body: ['The website and service-request process are intended for adults arranging property services. Any future provider marketplace or customer platform may be governed by supplemental terms and privacy disclosures when launched. Features and availability remain subject to development, testing, and market activation.'] },
+  { id: 'contact', title: 'Contact and review status', body: [`Privacy and data questions may be sent to ${EXIT_STRATEGY.email}. This is a draft for business and attorney review, not an attorney-approved policy.`] },
+]
+
+export const EXIT_WEBSITE_TERMS_SECTIONS: LegalSection[] = [
+  { id: 'acceptance', title: 'Acceptance and website use', body: ['These draft terms govern use of the public Exit Strategy Cleaning website and informational content. By using the website, visitors should use it lawfully and provide accurate information in quote or contact requests.'] },
+  { id: 'quotes', title: 'Quote requests and availability', body: ['A quote request is not a booking and does not guarantee availability, price, service scope, or completion time. Any estimate or quote is subject to review of customer-provided information and the applicable service agreement.'] },
+  { id: 'content-ip', title: 'Content and intellectual property', body: ['Website text, brand assets, photographs, layout, and other content belong to Reckley Ventures, LLC, Exit Strategy Cleaning, or their licensors. Visitors may not misuse, copy, impersonate, disrupt, scrape, or introduce malicious material into the website.'] },
+  { id: 'third-parties', title: 'Third-party links and communications', body: ['The website may link to third-party websites or services. Those destinations have their own terms and privacy practices. Electronic communications may be used to respond to quote, service, support, or legal requests.'] },
+  { id: 'availability', title: 'Availability and disclaimers', body: ['The website may contain errors, omissions, or interruptions. Website information is provided for general purposes and does not replace a written service agreement. No booking, service-quality, deposit, savings, or outcome guarantee is created by the website alone.'] },
+  { id: 'changes-contact', title: 'Changes and contact', body: [`These terms may change as the website and business evolve. Questions may be sent to ${EXIT_STRATEGY.email}. These terms are a draft for review and are distinct from Cleaning Service Terms.`] },
+]
+
+export const CLEANING_SERVICE_TERMS_SECTIONS: LegalSection[] = [
+  { id: 'review', title: 'Draft status and contract formation', body: ['These draft Cleaning Service Terms are intended as a framework for requested or booked cleaning work. They are not a final customer contract until the business confirms its quote, invoice, service-agreement, cancellation, payment, complaint, damage, and governing-law decisions.'] },
+  { id: 'pricing-scope', title: 'Quotes, pricing, and scope', body: ['The business must confirm whether estimates or fixed quotes are used, when prices may change because property conditions differ, which add-ons and taxes apply, and whether minimum, commercial, or recurring-service pricing exists. Services and exclusions should be stated in the applicable quote or service agreement.'] },
+  { id: 'property-access', title: 'Property readiness and access', body: ['Customers may need to provide safe access, working utilities, parking or building instructions, and accurate property details. Customers should secure valuables, confidential documents, medications, firearms, fragile items, pets, and areas cleaners should not enter. Customers should not assume hazardous-material remediation, mold remediation, bodily-fluid cleanup, pest remediation, heavy-item movement, or construction-debris removal is included unless expressly agreed.'] },
+  { id: 'scheduling-payment', title: 'Scheduling and payment', body: ['Appointment windows, delays, rescheduling, cancellation, lockout, no-access, deposits, payment methods, late payments, failed payments, chargebacks, and commercial invoicing remain business decisions for confirmation. No unresolved fee or payment architecture is promised by this draft.'] },
+  { id: 'quality-damage', title: 'Service concerns, photos, and damage', body: ['The business must confirm its complaint, re-clean, satisfaction, damage-reporting, and incident process. Cleaning cannot guarantee a landlord’s security-deposit decision. Photos may be used for quoting, proof of completion, quality review, condition documentation, or disputes when operationally appropriate; marketing use should require separate permission. Liability language requires attorney review.'] },
+  { id: 'recurring-commercial', title: 'Recurring and commercial services', body: ['If recurring or commercial services are offered, the applicable agreement should identify frequency, schedule changes, skipped visits, cancellation, approved contacts, invoice or ACH/card processes, change orders, keys, access, confidentiality, and building-security requirements.'] },
+  { id: 'contact', title: 'Contact and review status', body: [`Questions may be sent to ${EXIT_STRATEGY.email}. This draft is subject to business and attorney review and does not state that every listed service or payment method is currently available.`] },
+]
 
 export const PRIVACY_SECTIONS: LegalSection[] = [
   { id: 'scope', title: 'Scope and company', body: ['This policy describes how Reckley Ventures, LLC, doing business as KAR where applicable, may collect and use information in connection with KAR rider, driver/provider, website, support, and administrative interactions. It is written conservatively for review before commercial launch.'] },
