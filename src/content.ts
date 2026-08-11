@@ -50,6 +50,20 @@ export const DUUST = {
   logoText: 'DUUST',
 }
 
+export const PHANTOMBILLS = {
+  name: 'PhantomBills',
+  legalOperator: 'Reckley Ventures, LLC',
+  url: 'https://phantombills.com',
+  category: 'Consumer financial software',
+  status: 'In development / staging validation',
+  headline: 'Find the bills haunting your account.',
+  summary: 'A focused subscription and recurring-charge audit platform being built to help people understand what keeps charging their accounts and decide what deserves a closer look.',
+  detail: 'PhantomBills is a consumer financial software platform designed to make recurring charges easier to understand. Users securely connect financial institutions through Stripe Financial Connections, while PhantomBills is being built to organize recurring spending into a clearer view of what is worth keeping, reviewing, or canceling.',
+  customerValue: 'Bring recurring charges into one focused view instead of searching through account activity manually.',
+  privacyValue: 'Bank authentication is handled through Stripe Financial Connections rather than by PhantomBills collecting bank login credentials.',
+  product: 'Consumer subscription and recurring-charge audit platform',
+}
+
 export const EXIT_STRATEGY = {
   name: 'Exit Strategy Cleaning',
   legalOperator: 'Reckley Ventures, LLC operating Exit Strategy Cleaning',
