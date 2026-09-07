@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Nivora master logo</title>
+  <desc id="desc">Nivora mountain and horizon halo mark with NIVORA wordmark. No loading indicator.</desc>
+  <defs>
+    <linearGradient id="halo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#72B8FF"/>
+      <stop offset="0.52" stop-color="#DDEEFF"/>
+      <stop offset="1" stop-color="#FFF1D5"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#F7FBFF"/>
+      <stop offset="0.42" stop-color="#C9E2FF"/>
+      <stop offset="1" stop-color="#84B9F2"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Permanent Nivora brand mark: mountain horizon + rising halo. -->
+  <g transform="translate(0 15)">
+    <path d="M350 334 A250 250 0 0 1 850 334" fill="none" stroke="url(#halo)" stroke-width="12" stroke-linecap="round" filter="url(#softGlow)"/>
+
+    <path d="M210 500
+             L395 404
+             L458 438
+             L602 307
+             L742 438
+             L807 407
+             L997 500
+             L807 449
+             L751 471
+             L602 340
+             L474 466
+             L403 438
+             Z"
+          fill="url(#mountain)"/>
+
+    <!-- dark cut-ins keep the mountain silhouette simple at small sizes -->
+    <path d="M603 340 L652 388 L624 438 L688 473 L603 401 L548 461 L590 374 Z" fill="#08111F" opacity="0.92"/>
+    <path d="M395 404 L430 423 L404 455 L468 431 L448 458 L372 472 Z" fill="#08111F" opacity="0.86"/>
+    <path d="M807 407 L842 428 L812 456 L875 437 L851 467 L779 449 Z" fill="#08111F" opacity="0.86"/>
+  </g>
+
+  <text x="600" y="645" text-anchor="middle"
+        fill="#F4F8FC"
+        font-family="Inter, Avenir Next, Montserrat, Segoe UI, Arial, sans-serif"
+        font-size="76" font-weight="300" letter-spacing="34">NIVORA</text>
+</svg>
