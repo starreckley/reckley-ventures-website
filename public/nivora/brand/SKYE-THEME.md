@@ -117,12 +117,36 @@ Skye should ship with a small curated set rather than dozens of images.
 
 Recommended set:
 
-1. **First Light** — hero/default dark wallpaper, island silhouette at dawn.
+1. **First Light** — official hero/default wallpaper, bright dawn over a calm island-and-mountain seascape.
 2. **Blue Hour** — dark navy and misty blue, minimal horizon.
 3. **Silver Coast** — cooler neutral light theme wallpaper.
 4. **Open Skye** — brighter daytime option with spacious sky and distant island terrain.
 
 Every wallpaper should have light/dark-safe variants or be proven legible with the Nivora shell.
+
+### Locked default wallpaper asset
+
+The approved Skye **First Light** desktop wallpaper is stored at:
+
+```text
+public/nivora/brand/skye-first-light-wallpaper.jpg
+```
+
+This is the canonical asset Codex should pull for the Skye default desktop background unless a later explicit brand decision replaces it.
+
+### User wallpaper behavior
+
+The First Light wallpaper is a **default**, not a locked user setting.
+
+Requirements:
+
+- fresh Skye users receive First Light by default
+- users may replace it with any supported wallpaper of their choice
+- Nivora updates must preserve a user's custom wallpaper
+- minor Skye updates must not reset the desktop background to First Light
+- future island releases should preserve a user's current custom wallpaper unless the user explicitly chooses the new release artwork
+- First Light should remain available in Nivora Appearance/Wallpaper settings after the user changes backgrounds
+- login and lock screens may use a coordinated First Light family asset without forcing the desktop wallpaper back to the default
 
 ## Adaptive visual behavior
 
